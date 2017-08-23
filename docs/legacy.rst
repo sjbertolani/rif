@@ -173,6 +173,17 @@ flags you will likely need to modify
     -rifgen:target_res <residue_numbers.txt> OPTIONAL
     -rifgen:outdir     <output_dir_location>
     -rifgen:outfile    <output_file_name.rif.gz>
+    
+    # you will need to add at least one of these lines for small molecule binding targets
+    # Otherwise, no hb jobs will be found. Basically, add the new residue type (by 3 letter code)
+    # to either the acceptor or donor residue list.
+    
+#    -rifgen:accres X00 #add residue type X00 to the residue list of hbond acceptors(defined in -extra_res_params X00.params file)
+#    -rifgen:donres X00
+
+    # Only for adding a new residue type (for a small molecule)
+#-extra_res_params X00.params
+
 
 flags you may want need to tweak
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
